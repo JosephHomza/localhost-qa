@@ -1,6 +1,6 @@
 {
   "name": "localhost-qa",
-  "version": "0.1.0+codex.20260728221806",
+  "version": "0.1.0+codex.20260728235158",
   "description": "Evidence-backed browser QA for explicitly supplied localhost applications.",
   "author": {
     "name": "Joseph Homza"
