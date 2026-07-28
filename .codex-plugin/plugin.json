@@ -1,16 +1,16 @@
 {
   "name": "localhost-qa",
-  "version": "0.1.0+codex.20260728220923",
+  "version": "0.1.0+codex.20260728221806",
   "description": "Evidence-backed browser QA for explicitly supplied localhost applications.",
   "author": {
-    "name": "Local developer"
+    "name": "Joseph Homza"
   },
   "skills": "./skills/",
   "interface": {
     "displayName": "Localhost QA",
     "shortDescription": "Test localhost apps like a first-time user",
     "longDescription": "Runs isolated Playwright sessions against localhost, captures redacted evidence, separates flaky failures from reproducible defects, and generates regression tests from verified flows.",
-    "developerName": "Local developer",
+    "developerName": "Joseph Homza",
     "category": "Productivity",
     "capabilities": [
       "Interactive",
