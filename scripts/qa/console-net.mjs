@@ -1,0 +1,2 @@
+import{redact}from"../lib/redact.mjs";
+export function attachEvidence(page){const consoleErrors=[];const failedRequests=[];page.on("console",message=>{if(message.type()==="error")consoleErrors.push(redact(message.text()).value);});page.on("requestfailed",request=>failedRequests.push({url:redact(request.url()).value,error:redact(request.failure()?.errorText).value}));page.on("response",response=>{if(response.status()>=400)failedRequests.push({url:redact(response.url()).value,status:response.status()});});return{consoleErrors,failedRequests};}

@@ -1,0 +1,1 @@
+export function compare(before,after){const key=x=>JSON.stringify([x.title,x.evidence]);const old=new Set((before.findings??[]).map(key));const current=new Set((after.findings??[]).map(key));return{resolved:[...old].filter(x=>!current.has(x)).map(JSON.parse),introduced:[...current].filter(x=>!old.has(x)).map(JSON.parse)};}

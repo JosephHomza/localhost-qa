@@ -1,0 +1,2 @@
+const patterns=[[/Bearer\s+[A-Za-z0-9._-]+/gi,"Bearer [REDACTED]"],[/(password|token|secret|api[_-]?key)(["'=:\s]+)[^\s"'&]+/gi,"$1$2[REDACTED]"],[/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/g,"[REDACTED_EMAIL]"]];
+export function redact(value){let text=String(value??"");let redactions=0;for(const[pattern,replacement]of patterns)text=text.replace(pattern,()=>{redactions++;return replacement;});return{value:text,redactions};}

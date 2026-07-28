@@ -1,0 +1,2 @@
+export function boundaryFromText(text){const value=String(text).toLowerCase();if(/captcha/.test(value))return"captcha";if(/multi-factor|two-factor|verification code|mfa/.test(value))return"mfa";if(/payment|credit card|purchase|checkout/.test(value))return"payment";return null;}
+export async function navigationFlow(page,url){await page.goto(url,{waitUntil:"domcontentloaded"});const boundary=boundaryFromText(await page.locator("body").innerText());return{verified:!boundary,boundary,steps:[`navigate to ${new URL(url).pathname||"/"}`]};}

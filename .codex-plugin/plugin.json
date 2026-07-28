@@ -1,0 +1,33 @@
+{
+  "name": "localhost-qa",
+  "version": "0.1.0+codex.20260728215204",
+  "description": "Evidence-backed browser QA for explicitly supplied localhost applications.",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Localhost QA",
+    "shortDescription": "Test localhost apps like a first-time user",
+    "longDescription": "Runs isolated Playwright sessions against localhost, captures redacted evidence, separates flaky failures from reproducible defects, and generates regression tests from verified flows.",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/Sammy12357/localhost-qa",
+    "privacyPolicyURL": "https://github.com/Sammy12357/localhost-qa/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/Sammy12357/localhost-qa/blob/main/LICENSE",
+    "defaultPrompt": [
+      "Test my localhost app.",
+      "Reproduce this bug with evidence.",
+      "Generate a regression test from this verified flow."
+    ],
+    "brandColor": "#2563EB",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/logo.svg",
+    "screenshots": []
+  }
+}

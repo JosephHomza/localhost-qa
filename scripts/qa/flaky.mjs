@@ -1,0 +1,2 @@
+export function classifyRuns(outcomes){if(!Array.isArray(outcomes)||outcomes.length<2)throw new Error("at least two runs required");const failures=outcomes.filter(x=>x===false).length;return{flakyChecked:true,reproducibleRuns:`${failures}/${outcomes.length}`,classification:failures===outcomes.length?"confirmed":failures===0?"passed":"flaky"};}
+export async function rerun(check,{runs=3}={}){const outcomes=[];for(let i=0;i<runs;i++)outcomes.push(Boolean(await check(i)));return classifyRuns(outcomes);}
